@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
@@ -37,16 +37,16 @@ public class UIManager : MonoBehaviour
             return;
 
         if (priceValueText != null)
-            priceValueText.text = $"Price: £{economyManager.pricePerCandy:F2}";
+            priceValueText.text = $"Price: Â£{economyManager.pricePerCandy:F2}";
 
         if (dashboardText != null)
         {
             dashboardText.text =
-                $"Week: {gameManager.currentWeek}\n" +
-                $"Cash: £{economyManager.cash:F2}\n\n" +
+                $"Day: {gameManager.currentDay}\n" +
+                $"Cash: Â£{economyManager.cash:F2}\n\n" +
                 $"Stock: {economyManager.currentStock}/{economyManager.backpackCapacity}\n\n" +
-                $"Revenue: £{economyManager.lastRevenue:F2}\n" +
-                $"Profit: £{economyManager.lastProfit:F2}\n" +
+                $"Revenue: Â£{economyManager.lastRevenue:F2}\n" +
+                $"Profit: Â£{economyManager.lastProfit:F2}\n" +
                 $"Units Sold: {economyManager.lastUnitsSold}\n\n" +
                 $"Risk: {economyManager.riskLevel:F0}%";
         }

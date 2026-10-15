@@ -14,7 +14,7 @@ public class EconomyManager : MonoBehaviour
     [Header("School Market")]
     public float baseDemand = 25f;
     public float referencePrice = 2f;
-    public float priceElasticity = 1.3f;
+    public float priceElasticity = 1.2f;
 
     [Header("Player Social Stats (0-100)")]
     public float popularity = 0f;   // PR

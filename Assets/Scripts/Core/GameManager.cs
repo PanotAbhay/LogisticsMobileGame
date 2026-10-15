@@ -5,22 +5,22 @@ public class GameManager : MonoBehaviour
     public EconomyManager economyManager;
     public UIManager uiManager;
 
-    public int currentWeek = 1;
-    public float weekLength = 5f; // seconds per week
+    public int currentDay = 1;
+    public float dayLength = 5f; // seconds per school day
     private float timer = 0f;
 
     void Update()
     {
         timer += Time.deltaTime;
 
-        if (timer >= weekLength)
+        if (timer >= dayLength)
         {
             timer = 0f;
-            RunWeek();
+            RunDay();
         }
     }
 
-    void RunWeek()
+    void RunDay()
     {
         if (economyManager == null)
         {
@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
         }
 
         economyManager.RunSchoolDay();
-        currentWeek++;
+        currentDay++;
 
         if (economyManager.currentStock <= 0)
         {

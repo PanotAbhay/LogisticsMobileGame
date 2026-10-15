@@ -362,8 +362,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   economyManager: {fileID: 1731144728}
   uiManager: {fileID: 186813246}
-  currentWeek: 1
-  weekLength: 5
+  currentDay: 1
+  dayLength: 5
 --- !u!4 &882941116
 Transform:
   m_ObjectHideFlags: 0
@@ -974,12 +974,20 @@ MonoBehaviour:
   baseDemand: 25
   referencePrice: 2
   priceElasticity: 1.2
+  popularity: 0
+  gossip: 0
   riskLevel: 0
-  riskIncreasePerUnit: 0.5
   confiscationThreshold: 75
+  baseRiskPerTransaction: 1
+  baseSnitchRate: 0.15
+  loyalCustomerCount: 0
+  loyalCustomerChance: 0.1
+  loyalUnitsMultiplier: 2
+  shortagePremiumMultiplier: 2
   lastRevenue: 0
   lastProfit: 0
   lastUnitsSold: 0
+  lastStudentsSoldTo: 0
 --- !u!4 &1731144729
 Transform:
   m_ObjectHideFlags: 0
@@ -1160,50 +1168,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1818087153}
   m_CullTransparentMesh: 1
---- !u!1 &1954188523
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1954188525}
-  - component: {fileID: 1954188524}
-  m_Layer: 0
-  m_Name: EventManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1954188524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1954188523}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cebf6c02e94da3d489e2dea47d6361d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1954188525
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1954188523}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1992380061
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,7 +1211,6 @@ SceneRoots:
   - {fileID: 201324378}
   - {fileID: 882941116}
   - {fileID: 1731144729}
-  - {fileID: 1954188525}
   - {fileID: 186813245}
   - {fileID: 1004933916}
   - {fileID: 814886735}
