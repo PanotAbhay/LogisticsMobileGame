@@ -29,6 +29,8 @@ dotnet build Empire.csproj -nologo -v:q -p:OutputPath=<a dir outside the project
 - **Other runs:** for plain compile and import, use `-quit` instead.
 - **In the editor:** use Window > General > Test Runner > EditMode.
 
+**UnityMCP** (`com.coplaydev.unity-mcp`, registered in `.mcp.json` at `http://127.0.0.1:8080/mcp`) drives the open editor: console, play mode, scene objects. Its server only runs once it's started in Unity via Window > MCP for Unity > Toggle MCP Window. Prefer it over hand-editing scene YAML while the editor is open.
+
 ## Architecture
 
 - **The playable scene is `Assets/Scenes/MainGame.unity`.** Build Settings list only `SampleScene.unity`, which is an empty scene with just a camera. `Assets/Prefabs`, `Resources`, `ScriptableObjects`, and `Scenes 1` are empty placeholders.
